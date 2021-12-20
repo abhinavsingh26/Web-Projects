@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <title>First JS program</title>
+    <script src="../JS/Simple.js"></script>
+
+    <script>
+        //function dosomething() {
+        //    let v1 = parseint (prompt("enter the first value"))
+        //    let v2 = parseint (prompt("enter the second value"))
+        //    let option = prompt("enter the option as +, -, *, /")
+        //    switch (option) {
+                
+        //    }
+        //}
+        function onClickFunc() {
+            const v1 = parseFloat($("txtNum1").value) //$ is my custom function created in Simple.js
+            const v2 = parseFloat($("txtNum2").value)
+            const operand = $("option").value;
+            const res = operation(v1, v2, operand);
+            $("spResult").innerHTML = "<b>The Result: " + res + "</b>"
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Welcome to JS Programming</h1>
+    <hr />
+    <div>
+        <input type="number" placeholder="Enter the First Value" id="txtNum1" />
+        <input type="number" placeholder="Enter the Second Value" id="txtNum2" />
+        <span>Select an Option:</span>
+        <select id="option">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        <p><button onclick="onClickFunc()">Get Result</button></p>
+    </div>
+    <div>
+        <span id="spResult"></span>
+    </div>
+</body>
+</html>
