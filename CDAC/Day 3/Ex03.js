@@ -8,10 +8,14 @@ cart.addToCart({'id':3, 'name':"Samsung galexy",'price': 2000})
 cart.addToCart({'id':4, 'name':"nokia",'price': 56000})
 cart.addToCart({'id':5, 'name':"iphone",'price': 78000})
 
-const items= cart.getAll();
-items.forEach((e) => console.log(e.name))
+const itemsPur= cart.getAll();
+itemsPur.forEach((e) => console.log(e))
 /* Similer to above
-for (const item of items) {
+for (const item of itemsPur) {
     console.log(item)
 } 
 */ 
+
+for (const item of itemsPur){
+    console.log(`${item.name} costs ${item.price}`)
+}
