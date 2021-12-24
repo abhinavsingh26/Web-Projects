@@ -5,6 +5,7 @@ const fs = require("fs")
 
 const root = __dirname;
 //Adds the logic for the Express to process the body of the POSTED DATA from the web form. 
+
 app.use(parser.urlencoded({extended:false}))//It is used if U want any specific format of body structure. 
 //Data posted by the Form will be stored as body object into the request.  This will happen only if EXPRESS is using the body parser module. 
 
