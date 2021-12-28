@@ -13,11 +13,18 @@ class testClass{
 
 exports.newFeature = testClass
 exports.developedBy = "Abhinav"
-exports.developedOn = new Date("12/12/2021")
+exports.developedOn = new Date("12/12/2021") // Date() to get current date of the machine
 exports.objectInstance= (function(){
     let data =[];
     function testFunc(){ 
-        console.log("test Func")
+        data.push("Lala");
+        data.push("Suraj");
+        data.push("Nima");
+        data.push("Preeti");
+        data.push("Nancy");
+        data.push("Banana");
+        data.push("Apple");
+        console.log("The count of data is " + data.length)
     }
 
     return{
