@@ -7,18 +7,17 @@
     <title>Employee Management</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        const url = 'http://localhost:1234/Employees'
+        const url = 'http://localhost:1234/employee'
         const detailsFunc = function () {
-                let eId = $(this).attr("myId")
-                const temp = url + "/" + eId;
-                $.get(temp, (data) => {
-                    debugger;
-                    const selectedEmp = data[0];
-                    $("#txtId").val(selectedEmp.empId);
-                    $("#txtName").val(selectedEmp.empName);
-                    $("#txtSalary").val(selectedEmp.empSalary);
-                })
-            }
+            let eId = $(this).attr("myId")
+            const temp = url + "/" + eId;
+            $.get(temp, (data) => {
+                const selectedEmp = data[0];
+                $("#txtId").val(selectedEmp.empId);
+                $("#txtName").val(selectedEmp.empName);
+                $("#txtSalary").val(selectedEmp.empSalary);
+            })
+        }
         getData = function(){
             $("table").find("tr:gt(0)").remove()
               $.get(url, (data) => {                  
