@@ -35,3 +35,8 @@ app.get("/Emplist", (req,res)=>{
 app.listen(1234, ()=>{
     console.log("server is ready.")
 })
+
+app.get("/employee/:id", (req, res)=>{
+    const id = parseInt(req.params.id)//Reads the Query string of the URL and extract the Id passed by the request. 
+    db.collection("employee").find({"empId": id}).toArray((e, result)=> res.send(result))
+})
